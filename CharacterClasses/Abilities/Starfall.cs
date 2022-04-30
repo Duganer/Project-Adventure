@@ -2,17 +2,17 @@
 
 namespace ProjectAdventure.CharacterClasses.Abilities
 {
-    public class Launch : Ability
+    class Starfall : Ability
     {
-        public Launch()
+        public Starfall()
         {
-            Name = "Launch";
-            FlavorText = "Jump up high into the air landing on an opponent.";
+            Name = "Starfall";
+            FlavorText = "That shooting star is getting offly close to the enemies face.";
             ModifiedStat = StatEnum.MagicAttack;
-            Modifier = 7;
+            Modifier = 10;
             impactedTurns = 0;
             UseOnEnemy = true;
-            ManaCost = 4;
+            ManaCost = 5;
         }
     }
 }

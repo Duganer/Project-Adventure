@@ -5,16 +5,16 @@ using System.Collections.Generic;
 
 namespace ProjectAdventure.Battles
 {
-    public class ReturnToCityBattle : Battle
+    public class ReturnToCityBattle3 : Battle
     {
         private List<BaseFighter> selectableEnemies = new List<BaseFighter>();
 
-        public ReturnToCityBattle(List<BaseFighter> units) : base(units)
+        public ReturnToCityBattle3(List<BaseFighter> units) : base(units)
         {
             Enemies = new List<BaseFighter>()
             {
-                new LightMage() { CharacterName = "Aven" },
-                new DarkMage() { CharacterName = "Neva" }
+                new SuperStar1() { CharacterName = "Eva" },
+                new SuperStar2() { CharacterName = "Ave" }
             };
 
             foreach (var unit in Enemies)
@@ -29,7 +29,7 @@ namespace ProjectAdventure.Battles
 
         public override void DetermineNextBattle()
         {
-            NextBattle = new ElementalBattle(Units);
+            NextBattle = new ElementalBattle3(Units);
         }
 
         public override void PostBattleInteraction()
@@ -64,10 +64,10 @@ namespace ProjectAdventure.Battles
         {
             Console.WriteLine();
             Console.WriteLine("You hear a familiar voice say, 'You have proven yourself'.");
-            Console.WriteLine("A second voice, that sounds similar to the first says, 'We will help after you pass our final test'");
+            Console.WriteLine("A second voice says, 'We will help after you pass our final test'");
             Console.WriteLine("The stranger who sent you on your journey reveals himself from under his covering.");
-            Console.WriteLine("Beside him stands his brother who also reveals himself.");
-            Console.WriteLine("They draw their staves and the final test begins.");
+            Console.WriteLine("Beside him stands his sister who also reveals herself.");
+            Console.WriteLine("They pull out a microphone and a guitar and the final test begins.");
         }
     }
 }

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace ProjectAdventure.CharacterClasses.Enemies
 {
-    public class LightMage : BaseFighter
+    public class PlanetaryAstronomer : BaseFighter
     {
-        public LightMage()
+        public PlanetaryAstronomer()
         {
             Level = 7;
             Health = random.Next(100, 120);
@@ -16,36 +16,36 @@ namespace ProjectAdventure.CharacterClasses.Enemies
             MagicAttack = random.Next(40, 50);
             MagicDefense = random.Next(30, 40);
             Speed = random.Next(25, 35);
-            Abilities = new List<Ability>() { new Shine(), new Cure2(), new Protect() };
-            CharacterType = "Light Mage";
-            Mana = random.Next(60, 80);
+            Abilities = new List<Ability>() { new Meteor(), new SunRay(), new HeavenlyBody() };
+            CharacterType = "Planetary Astronomer";
+            Mana = random.Next(50, 70);
             MaxMana = Mana;
-            CritChance = 2;
-            CritDamage = 2;
-            DodgeChance = 2;
+            CritChance = 1;
+            CritDamage = 1;
+            DodgeChance = 1;
         }
 
-        public LightMage(BaseFighter fighter) : base(fighter) { }
+        public PlanetaryAstronomer(BaseFighter fighter) : base(fighter) { }
 
         public override BaseFighter Clone()
         {
-            return new LightMage(this);
+            return new PlanetaryAstronomer(this);
         }
 
         public override void IncreaseLevel()
         {
             Level += 1;
-            var healthIncrease = random.Next(6, 12);
+            var healthIncrease = random.Next(12, 20);
             Health += healthIncrease;
             MaxHealth += healthIncrease;
-            var manaIncrease = random.Next(4, 10);
+            var manaIncrease = random.Next(4, 8);
             Mana += manaIncrease;
             MaxMana += manaIncrease;
-            PhysicalAttack += random.Next(1, 3);
-            PhysicalDefense += random.Next(1, 3);
-            MagicAttack += random.Next(6, 12);
-            MagicDefense += random.Next(4, 7);
-            Speed += random.Next(2, 4);
+            PhysicalAttack += random.Next(3, 5);
+            MagicDefense += random.Next(3, 5);
+            MagicAttack += random.Next(6, 9);
+            MagicDefense += random.Next(6, 9);
+            Speed += random.Next(1, 3);
         }
 
         public override BaseFighter UpgradeClass(UpgradeItemEnum upgradeItem)

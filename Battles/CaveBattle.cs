@@ -11,7 +11,7 @@ namespace ProjectAdventure.Battles
         public CaveBattle(List<BaseFighter> units) : base(units)
         {
             Enemies = new List<BaseFighter>();
-            Enemies.Add(new Dragon() { CharacterName = "???" });
+            Enemies.Add(new Dragon() { CharacterName = "Raysses" });
 
             foreach (var enemy in Enemies)
             {
@@ -38,11 +38,11 @@ namespace ProjectAdventure.Battles
             }
             else if (nextBattle.ToLower() == "east")
             {
-                NextBattle = new SmokeBattle(Units);
+                NextBattle = new BoxBattle(Units);
             }
             else if (nextBattle.ToLower() == "west")
             {
-                NextBattle = new DeepForrestBattle(Units);
+                NextBattle = new LabBattle(Units);
             }
         }
 

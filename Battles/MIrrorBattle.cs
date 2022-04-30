@@ -1,7 +1,6 @@
 ﻿using ProjectAdventure.CharacterClasses.Common;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace ProjectAdventure.Battles
 {
@@ -22,7 +21,37 @@ namespace ProjectAdventure.Battles
 
         public override void DetermineNextBattle()
         {
-            NextBattle = new ReturnToCityBattle(Units);
+            var random = new Random();
+            var nextBattleInt = random.Next(1, 5);
+
+            switch(nextBattleInt)
+            {
+                case 1:
+                    {
+                        NextBattle = new ReturnToCityBattle1(Units);
+                        break;
+                    }
+                case 2:
+                    {
+                        NextBattle = new ReturnToCityBattle2(Units);
+                        break;
+                    }
+                case 3:
+                    {
+                        NextBattle = new ReturnToCityBattle3(Units);
+                        break;
+                    }
+                case 4:
+                    {
+                        NextBattle = new ReturnToCityBattle4(Units);
+                        break;
+                    }
+                default:
+                    {
+                        NextBattle = new ReturnToCityBattle1(Units);
+                        break;
+                    }
+            }
         }
 
         public override void PostBattleInteraction()

@@ -12,7 +12,7 @@ namespace ProjectAdventure.Battles
         {
             
             Enemies = new List<BaseFighter>();
-            Enemies.Add(new Bear());
+            Enemies.Add(new Bear() { CharacterName = "Koda"});
 
             IsFinalBattle = false;
         }

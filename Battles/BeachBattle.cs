@@ -20,7 +20,6 @@ namespace ProjectAdventure.Battles
                 enemy.IncreaseLevel();
                 enemy.IncreaseLevel();
                 enemy.IncreaseLevel();
-                enemy.IncreaseLevel();
             }
 
             IsFinalBattle = false;
@@ -39,11 +38,11 @@ namespace ProjectAdventure.Battles
             }
             else if (nextBattle.ToLower() == "north")
             {
-                NextBattle = new SmokeBattle(Units);
+                NextBattle = new BoxBattle(Units);
             }
             else if (nextBattle.ToLower() == "south")
             {
-                NextBattle = new DeepForrestBattle(Units);
+                NextBattle = new CemetaryBattle(Units);
             }
         }
 

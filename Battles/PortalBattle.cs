@@ -37,11 +37,11 @@ namespace ProjectAdventure.Battles
             }
             else if (nextBattle.ToLower() == "north")
             {
-                NextBattle = new SmokeBattle(Units);
+                NextBattle = new LabBattle(Units);
             }
             else if (nextBattle.ToLower() == "south")
             {
-                NextBattle = new DeepForrestBattle(Units);
+                NextBattle = new ArmyBattle(Units);
             }
         }
 

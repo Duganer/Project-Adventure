@@ -10,8 +10,8 @@ namespace ProjectAdventure.Battles
         public SmokeBattle(List<BaseFighter> units) : base(units)
         {
             Enemies = new List<BaseFighter>();
-            Enemies.Add(new Imp() { CharacterName = "Mxyzptlk" });
-            Enemies.Add(new Imp() { CharacterName = "Lucy" });
+            Enemies.Add(new Imp() { CharacterName = "Tyim" });
+            Enemies.Add(new Imp() { CharacterName = "Gror" });
 
             foreach (var enemy in Enemies)
             {

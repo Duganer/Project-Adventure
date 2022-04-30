@@ -2,17 +2,17 @@
 
 namespace ProjectAdventure.CharacterClasses.Abilities
 {
-    public class Launch : Ability
+    class HeavenlyBody : Ability
     {
-        public Launch()
+        public HeavenlyBody()
         {
-            Name = "Launch";
-            FlavorText = "Jump up high into the air landing on an opponent.";
+            Name = "Heavenly Body";
+            FlavorText = "Bring the heavens to the earth.";
             ModifiedStat = StatEnum.MagicAttack;
-            Modifier = 7;
+            Modifier = 10;
             impactedTurns = 0;
             UseOnEnemy = true;
-            ManaCost = 4;
+            ManaCost = 5;
         }
     }
 }

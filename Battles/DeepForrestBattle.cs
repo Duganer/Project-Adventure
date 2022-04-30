@@ -10,9 +10,9 @@ namespace ProjectAdventure.Battles
         public DeepForrestBattle(List<BaseFighter> units) : base(units)
         {
             Enemies = new List<BaseFighter>();
-            Enemies.Add(new Mage() { CharacterName = "Morgana" });
-            Enemies.Add(new Mage() { CharacterName = "Theodora" });
-            Enemies.Add(new Mage() { CharacterName = "Sabrina" });
+            Enemies.Add(new Mage() { CharacterName = "Seers" });
+            Enemies.Add(new Mage() { CharacterName = "Necromi" });
+            Enemies.Add(new Mage() { CharacterName = "Invoques" });
 
             Enemies[0] = Enemies[0].UpgradeClass(UpgradeItemEnum.BlueStone);
             Enemies[1] = Enemies[1].UpgradeClass(UpgradeItemEnum.YellowStone);

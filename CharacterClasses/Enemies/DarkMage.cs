@@ -8,7 +8,7 @@ namespace ProjectAdventure.CharacterClasses.Enemies
     {
         public DarkMage()
         {
-            Level = 9;
+            Level = 7;
             Health = random.Next(100, 120);
             MaxHealth = Health;
             PhysicalAttack = random.Next(25, 35);

@@ -2,18 +2,17 @@
 
 namespace ProjectAdventure.CharacterClasses.Abilities
 {
-    public class Lunge : Ability
+    class RockOut : Ability
     {
-        public Lunge()
+        public RockOut()
         {
-            Name = "Lunge";
-            FlavorText = "Perfectly stride to stab the opponent with your spear.";
+            Name = "Rock Out";
+            FlavorText = "The headbanging begins!! And continues all night long!!!";
             ModifiedStat = StatEnum.PhysicalAttack;
-            Modifier = 5;
+            Modifier = 12;
             impactedTurns = 0;
             UseOnEnemy = true;
-            ManaCost = 3;
+            ManaCost = 5;
         }
     }
 }
-

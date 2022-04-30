@@ -2,17 +2,17 @@
 
 namespace ProjectAdventure.CharacterClasses.Abilities
 {
-    public class Launch : Ability
+    class ShadowSpear : Ability
     {
-        public Launch()
+        public ShadowSpear()
         {
-            Name = "Launch";
-            FlavorText = "Jump up high into the air landing on an opponent.";
+            Name = "Shadow Spear";
+            FlavorText = "Create a spear of shadow and chuck it at an enemy.";
             ModifiedStat = StatEnum.MagicAttack;
-            Modifier = 7;
+            Modifier = 12;
             impactedTurns = 0;
             UseOnEnemy = true;
-            ManaCost = 4;
+            ManaCost = 5;
         }
     }
 }
