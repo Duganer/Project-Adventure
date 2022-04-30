@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>ProjectAdventure.Battles</AssemblyName>
+    <RootNamespace>ProjectAdventure.Battles</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CharacterClasses\CharacterClasses.csproj" />
+  </ItemGroup>
+
+</Project>
